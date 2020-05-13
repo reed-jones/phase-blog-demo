@@ -20,6 +20,7 @@ $factory->define(Article::class, function (Faker $faker) {
         'title' => $title,
         'slug' => Str::slug($title),
         'excerpt' => Str::limit($content, 250),
-        'content' => $content
+        'content' => $content,
+        'created_at' => $faker->dateTimeBetween('-2 years', 'now')
     ];
 });

@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::phase('/', 'BlogController@HomePage');
-Route::phase('/{article}', 'BlogController@SingleArticle');
+Route::phase('/about', 'BlogController@AboutPage');
+Route::phase('/contact', 'BlogController@ContactPage');
+Route::phase('/posts/{article}', 'BlogController@SingleArticle');

@@ -13,6 +13,11 @@ import articles from './modules/articles';
  * and updating the vuex state on page changes.
  */
 export const store = new Store(hydrate({
+    state: {
+        bio: null,
+        contact: null,
+        author: 'John Doe'
+    },
     modules: {
         articles
     }

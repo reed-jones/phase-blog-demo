@@ -11,6 +11,8 @@ class BlogController extends Controller
 {
     public function HomePage()
     {
+        // Pull the fake articles from our fake helper
+        // generator
         $fakeArticles = $this->getFakerArticles();
 
         // Add them to our vuex store
@@ -37,6 +39,30 @@ class BlogController extends Controller
         return Phase::view();
     }
 
+    public function AboutPage()
+    {
+        $faker = \Faker\Factory::create();
+        $faker->seed(1234);
+        Vuex::state([
+            'bio' => $faker->paragraphs(3, false)
+        ]);
+
+        return Phase::view();
+    }
+
+    public function ContactPage()
+    {
+        $faker = \Faker\Factory::create();
+        $faker->seed(4321);
+        Vuex::state([
+            'contact' => $faker->paragraphs(3, false)
+        ]);
+
+        return Phase::view();
+    }
+    /**
+     * not a view
+     */
     private function getFakerArticles()
     {
         // Generate a collection of fake blog articles...

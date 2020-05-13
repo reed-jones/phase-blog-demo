@@ -1,4 +1,5 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
+const tailwindcss = require("tailwindcss");
 require("@phased/phase");
 
 /*
@@ -12,4 +13,14 @@ require("@phased/phase");
  |
  */
 
-mix.phase();
+mix
+  .options({
+    processCssUrls: false,
+    postCss: [tailwindcss("./tailwind.config.js")],
+  })
+  .webpackConfig(() => ({
+    resolve: {
+      alias: { "@": path.resolve(__dirname, "resources", "js") },
+    },
+  }))
+  .phase();
