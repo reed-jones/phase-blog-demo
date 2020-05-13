@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::phase('/', 'BlogController@HomePage');
+Route::phase('/{article}', 'BlogController@SingleArticle');
