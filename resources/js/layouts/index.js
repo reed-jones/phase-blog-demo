@@ -7,7 +7,7 @@ export const layout = new NiftyLayouts({
         return {
             "BlogController@HomePage": "MainLayout",
             "BlogController@SingleArticle": "ArticleLayout"
-        }[this.$route.name] ?? 'MainLayout' // optional fallback
+        }[this.$route.name] ?? 'MainLayout' // optional fallback for unspecified routes
     },
 
     layouts: layoutRequire(require.context('./', true, /\.vue$/)),

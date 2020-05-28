@@ -16,24 +16,21 @@
                 <span class="w-full my-2">
                     <RouterLink
                         exact-active-class="border-b border-gray-600"
-                        to="/"
-                    >
+                        to="/">
                         Articles
                     </RouterLink>
                 </span>
                 <span class="w-full my-2">
                     <RouterLink
                         exact-active-class="border-b border-gray-600"
-                        to="/about"
-                    >
+                        to="/about">
                         About Me
                     </RouterLink>
                 </span>
                 <span class="w-full my-2">
                     <RouterLink
                         exact-active-class="border-b border-gray-600"
-                        to="/contact"
-                    >
+                        to="/contact">
                         Contact Me
                     </RouterLink>
                 </span>
