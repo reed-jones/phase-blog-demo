@@ -38,6 +38,7 @@ export default new Vue({
   functional: true,
   render: h => h('NiftyLayout', {
     attrs: {
+      id: 'app',
       layoutTransitionName: "layout-transition",
       layoutTransitionMode:"out-in",
       routeTransitionName:"route-transition",
