@@ -11,13 +11,6 @@ import './bootstrap'
 import Vue from "vue";
 
 /**
- * App.vue could be anything, however this is the
- * main 'entry' for our SPA. Think of this as the global
- * layout file that wraps every other page.
- */
-import App from "./App.vue";
-
-/**
  * This is our phase-enhanced vuex store.
  */
 import { store } from "./store";
@@ -29,6 +22,11 @@ import { store } from "./store";
 import { router } from "./router";
 
 /**
+ * Here is our NiftyLayouts config.
+ */
+import { layout } from './layouts'
+
+/**
  * Instead of mounting the app directly, we will export it now.
  * This allows phase to control enabling/disabling server side
  * rendering
@@ -36,5 +34,14 @@ import { router } from "./router";
 export default new Vue({
   store,
   router,
-  render: (h) => h(App),
+  layout,
+  functional: true,
+  render: h => h('NiftyLayout', {
+    attrs: {
+      layoutTransitionName: "layout-transition",
+      layoutTransitionMode:"out-in",
+      routeTransitionName:"route-transition",
+      routeTransitionMode:"out-in"
+    }
+  }),
 });
