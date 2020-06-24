@@ -33,8 +33,12 @@ services:
 
     mariadb:
         container_name: mariadb
-        env_file: .env
         image: mariadb:latest
+        environment:
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_USER: ${DB_USERNAME}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
         ports:
             - 3306:3306
         networks:
