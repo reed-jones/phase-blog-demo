@@ -20,7 +20,7 @@ Other key things to take note of if you are new to Vercel are the environment va
 
 ### Docker setup
 
-Rhe image can be built using the existing docker-compose config.
+The image can be built using the existing docker-compose config.
 ```sh
 docker-composer build
 ```
