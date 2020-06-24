@@ -1,5 +1,6 @@
 const mix = require("laravel-mix");
 const tailwindcss = require("tailwindcss");
+const Mix = require("laravel-mix/src/Mix");
 require("@phased/phase");
 
 /*
@@ -24,3 +25,7 @@ mix
     },
   }))
   .phase();
+
+if (!mix.inProduction()) {
+  mix.sourceMaps();
+}
