@@ -17,3 +17,27 @@ this some parts of laravel may not work as expected.
 Also you may notice that we are creating some directories in the boot method. This is due to the fact that Vercel deploys are read-only with the exception of the `/tmp` directory and so any temporary files such as the ones required for Vue.js Server Side Rendering will be created there.
 
 Other key things to take note of if you are new to Vercel are the environment variables set are set in `now.json`. Some are as you would expect such as `APP_ENV` & `APP_URL`, however any secrets (such as `APP_KEY`) should be set using [Vercels Environment Variables](https://vercel.com/docs/v2/build-step#environment-variables).
+
+### Docker setup
+
+Rhe image can be built using the existing docker-compose config.
+```sh
+docker-composer build
+```
+
+To start the server
+```
+docker-composer up -d
+```
+
+To stop
+```
+docker-composer down
+```
+
+To pass arguments through
+```
+docker-composer exec laravel npm run hot
+docker-composer exec laravel composer install
+docker-composer exec laravel php artisan migrate
+```

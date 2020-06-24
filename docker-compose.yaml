@@ -1,0 +1,59 @@
+version: "3.8"
+services:
+    laravel:
+        container_name: laravel
+        working_dir: /var/www/laravel
+        ports:
+            - 8080:8080
+        build:
+            context: ./docker/laravel
+        volumes:
+            - ./:/var/www/laravel:cached
+        networks:
+            - laravel-network
+
+    nginx:
+        container_name: nginx
+        build:
+            context: ./docker/nginx
+        volumes:
+            - ./:/var/www/laravel:cached
+            - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:delegated
+            - ./docker/nginx/sites/:/etc/nginx/sites-available:delegated
+            - ./docker/nginx/conf.d/:/etc/nginx/conf.d:delegated
+        depends_on:
+            - laravel
+            - redis
+            - mariadb
+        ports:
+            - 80:80
+            - 443:443
+        networks:
+            - laravel-network
+
+    mariadb:
+        container_name: mariadb
+        env_file: .env
+        image: mariadb:latest
+        ports:
+            - 3306:3306
+        networks:
+            - laravel-network
+
+    redis:
+        container_name: redis
+        image: redis:alpine
+        ports:
+            - 6379:6379
+        networks:
+            - laravel-network
+
+volumes:
+    redis:
+        driver: "local"
+    mariadb:
+        driver: "local"
+
+networks:
+    laravel-network:
+        driver: bridge
