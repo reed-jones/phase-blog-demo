@@ -1443,23 +1443,23 @@
         },
         {
             "name": "phased/phase",
-            "version": "v0.5.0",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reed-jones/phase-phase-php.git",
-                "reference": "ec3fec164e64703a74e6293f9be35aacfa38dcec"
+                "reference": "684995a7448bb888bde6c39d25a8fbca66631986"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reed-jones/phase-phase-php/zipball/ec3fec164e64703a74e6293f9be35aacfa38dcec",
-                "reference": "ec3fec164e64703a74e6293f9be35aacfa38dcec",
+                "url": "https://api.github.com/repos/reed-jones/phase-phase-php/zipball/684995a7448bb888bde6c39d25a8fbca66631986",
+                "reference": "684995a7448bb888bde6c39d25a8fbca66631986",
                 "shasum": ""
             },
             "require": {
-                "phased/routing": "^0.4",
-                "phased/state": "^0.4",
+                "phased/routing": "^0.5",
+                "phased/state": "^0.5",
                 "php": "^7.2",
-                "spatie/laravel-server-side-rendering": "^1.3"
+                "spatie/laravel-server-side-rendering": "^1.4.1"
             },
             "type": "library",
             "extra": {
@@ -1483,20 +1483,20 @@
                 }
             ],
             "description": "Phase meta package",
-            "time": "2020-06-26T15:04:59+00:00"
+            "time": "2020-08-04T02:24:04+00:00"
         },
         {
             "name": "phased/routing",
-            "version": "v0.4.0",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reed-jones/phase-routing-php.git",
-                "reference": "ba3b29be7dee58825d13655fb0024e1c2bc142fa"
+                "reference": "4ac531420067549a02c76a16a26685f172de4703"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reed-jones/phase-routing-php/zipball/ba3b29be7dee58825d13655fb0024e1c2bc142fa",
-                "reference": "ba3b29be7dee58825d13655fb0024e1c2bc142fa",
+                "url": "https://api.github.com/repos/reed-jones/phase-routing-php/zipball/4ac531420067549a02c76a16a26685f172de4703",
+                "reference": "4ac531420067549a02c76a16a26685f172de4703",
                 "shasum": ""
             },
             "require": {
@@ -1535,20 +1535,20 @@
                 }
             ],
             "description": "Transparent Vue <-> Laravel Integration",
-            "time": "2020-03-15T18:07:34+00:00"
+            "time": "2020-08-03T18:25:51+00:00"
         },
         {
             "name": "phased/state",
-            "version": "v0.4.0",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reed-jones/phase-state-php.git",
-                "reference": "d384ea4b53d3c43660a5762d8216ce976faacb2f"
+                "reference": "3a92c6fea551ec421ca4702a23b3bc84ee9416b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reed-jones/phase-state-php/zipball/d384ea4b53d3c43660a5762d8216ce976faacb2f",
-                "reference": "d384ea4b53d3c43660a5762d8216ce976faacb2f",
+                "url": "https://api.github.com/repos/reed-jones/phase-state-php/zipball/3a92c6fea551ec421ca4702a23b3bc84ee9416b1",
+                "reference": "3a92c6fea551ec421ca4702a23b3bc84ee9416b1",
                 "shasum": ""
             },
             "require": {
@@ -1587,7 +1587,7 @@
                 }
             ],
             "description": "Magic Data Loading. Laravel <-> Vuex Syncing",
-            "time": "2020-03-01T17:02:26+00:00"
+            "time": "2020-06-26T15:04:59+00:00"
         },
         {
             "name": "phpoption/phpoption",
