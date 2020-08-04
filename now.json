@@ -6,7 +6,7 @@
       }
     },
     "routes": [
-      { "src": "/css/app.css",  "dest": "/public/css/app.css" },
+      { "src": "/css/app.css",  "dest": "public/css/app.css" },
       { "src": "/(.*)",  "dest": "/api/index.php" }
     ],
     "env": {
