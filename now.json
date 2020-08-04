@@ -6,7 +6,7 @@
       }
     },
     "routes": [
-      { "src": "/(.*)\\.(.*)$", "dest": "public/$1.$2"},
+      { "handle": "filesystem" },
       { "src": "/(.*)",  "dest": "/api/index.php" }
     ],
     "env": {
