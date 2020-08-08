@@ -6,7 +6,8 @@
       }
     },
     "routes": [
-      { "src": "/(css|js)/\\.(.*)$", "dest": "/api/assets.php?file=$1/$2"}
+      { "src": "/(css|js)/(.*)$", "dest": "/api/assets.php?file=$1/$2"},
+      { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "env": {
       "APP_NAME": "Phase Blog Demo",

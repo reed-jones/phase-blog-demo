@@ -1,5 +1,3 @@
 <?php
 
-
-echo $_GET['file'];
-die();
+echo require __DIR__ . '/../public/' . $_GET['file'];
