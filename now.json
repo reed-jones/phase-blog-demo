@@ -1,15 +1,13 @@
 {
     "version": 2,
     "functions": {
-      "api/assets.php": {
-        "runtime": "vercel-php@0.3.1"
-      },
-      "api/index.php": {
+      "api/*s.php": {
         "runtime": "vercel-php@0.3.1"
       }
     },
     "routes": [
-      { "src": "/(.*)\\.(.*)$", "dest": "/api/assets.php"}
+      { "src": "/(css|js)/\\.(.*)$", "dest": "/api/assets.php?file=$1/$2"},
+      { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "env": {
       "APP_NAME": "Phase Blog Demo",
